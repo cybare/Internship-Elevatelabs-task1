@@ -102,3 +102,24 @@ Security Risk: May be vulnerable to spoofing, DNS tunneling, and past CVEs
 
 Recommendation: Restrict to internal use, keep dnsmasq updated, and monitor for unusual DNS activity
 
+
+### Step 4:- Start wireshark and then click on capture after that run nmap scan command again after nmap scan is completed stop the wireshark and save this as pcap file.
+
+### Step 5:- open pcap file and fliter  tcp.flags.syn == 1
+
+Observed SYN packets being sent to multiple IPs on various ports.
+
+
+![SYN packets](Screenshots/tcp-SYN.png)
+
+### Step 6:-  Apply filter tcp.flags.syn == 1 && tcp.flags.ack == 1
+
+Received SYN-ACKs from open ports
+
+![SYN-ACK response](Screenshots/tcp-SYN-ACK.png)
+
+### Step 7:- Apply filter tcp.flags.reset == 1
+
+Received Reset response 
+
+![rst response](Screenshots/tcp-rst.png)
