@@ -38,3 +38,67 @@ Now use ip a command
 •	Broadcast address: 10.0.2.255
 
 ### Step 3:- Start nmap first scanned own ip.
+
+![self scan](Screenshots/scanselfip.png)
+
+### Step 4:- Scan ip address for subnet 10.0.2.0/24 total 256 ip address
+
+![subnet scan](Screenshots/scan 10.0.2.0 to 24 256 ip.png)
+
+We get information that on 2 ip address open ports are present.
+
+1)	10.0.2.2
+
+On this ip two ports are opened 135 and 445 on windows.
+
+2)	10.0.2.3
+   
+On this ip one port is opened Port 53.
+
+
+##### a)	Port 135 (MSRPC)
+
+Service: Microsoft Remote Procedure Call
+
+Use: Enables Windows processes to communicate remotely
+
+Common On: Windows systems
+
+Security Risk: High — targeted in many worms and exploits (e.g., Blaster, WannaCry)
+
+Recommendation: Block port 135 externally at firewalls; monitor for unusual traffic
+
+It often works together with other ports, like:
+
+•	139 (NetBIOS)
+
+•	445 (SMB)
+
+•	High dynamic ports (e.g., 49152–65535)
+
+
+##### b)	Port 445 (Microsoft-DS)
+
+Service: SMB(Server Message Block) protocol over TCP
+
+Used for: File sharing, printer access, Active Directory communication
+
+Common on: Windows systems
+
+Security Risk: Very high — exploited by major malware (e.g., WannaCry, EternalBlue)
+
+Recommendation: Block on public-facing interfaces, restrict on internal networks, and disable SMBv1
+
+
+##### c)	Port 53 (dnsmasq)
+
+Service: DNS (using dnsmasq)
+
+Protocol: TCP (used for large DNS responses or zone transfers)
+
+Purpose: Handles DNS queries and optionally DHCP
+
+Security Risk: May be vulnerable to spoofing, DNS tunneling, and past CVEs
+
+Recommendation: Restrict to internal use, keep dnsmasq updated, and monitor for unusual DNS activity
+
