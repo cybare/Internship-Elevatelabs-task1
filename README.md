@@ -123,3 +123,5 @@ Received SYN-ACKs from open ports
 Received Reset response 
 
 ![rst response](Screenshots/tcp-rst.png)
+
+Scan and saved the nmap result in txt file along with pcap file for wireshark both of them are present in Output folder.
