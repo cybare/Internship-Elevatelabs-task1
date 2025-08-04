@@ -23,3 +23,18 @@ Use command ifconfig
 •	Netmask: 255.255.255.0
 
 •	Broadcast Address: 10.0.2.255
+
+Now use ip a command
+
+![Ip range output](Screenshots/iprange.png)
+
+#### IP Range:
+• subnet: 10.0.2.0/24
+
+•	Network range: 10.0.2.1 to 10.0.2.254
+
+•	Subnet mask: /24 (or 255.255.255.0)
+
+•	Broadcast address: 10.0.2.255
+
+### Step 3:- Start nmap first scanned own ip.
