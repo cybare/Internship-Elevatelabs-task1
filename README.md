@@ -43,7 +43,7 @@ Now use ip a command
 
 ### Step 4:- Scan ip address for subnet 10.0.2.0/24 total 256 ip address
 
-![subnet scan](Screenshots/scan 10.0.2.0 to 24 256 ip.png)
+![subnet scan](Screenshots/scan10.0.2.0to24ip.png)
 
 We get information that on 2 ip address open ports are present.
 
